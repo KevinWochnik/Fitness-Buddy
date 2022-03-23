@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+<body>
+    <div class="app">
+        <section class="header border">
+            <h1 class="welcoming" id="font_H1">your fitness buddy</h1>
+            <aside class="colors">
+               <button class="changeColor"></button>
+            </aside>
+        </section>
+        <section class="calorieCalculator border">
+            <h1 class="title" id="font_H1">oblicz swoje zapotrzebowanie kaloryczne</h1>
+            <form action="submit" class="options" id="caloriesForm">
+                <div class="inputAge input">
+                    <h2 id="font_H2">Wiek</h2>
+                    <input type="number" class="option" id="age" placeholder="lat">
+                </div> 
+                <div class="inputWeight input">
+                    <h2 id="font_H2">Waga</h2>
+                    <input type="number" class="option" id="weight" placeholder="kg">
+                </div> 
+                <div class="inputGender">
+                    <h2 id="font_H2">Płeć</h2>
+                    <label class="man"><input type="radio" name="option" id="man" value="m">M</label>
+                    <label class="woman"><input type="radio" name="option" id="woman" value="w">K</label>
+                </div> 
+                <div class="inputRange">
+                    <h2 id="font_H2">Dzienna aktywność</h2>
+                    <input type="range" class="option" id="activity" min="1" max="1.5" step=".1">
+                </div> 
+                <button class="submitCalculator" id="submitCalories">&#x2705</button>
+            </form>
+            <div class="summary" id="font_H3_white">
+                <h2 class="summaryText" id="font_H2">Twoje dzienne zapotrzebowanie to:</h2>
+                <h3 class="kcal" id="H1Calories">kcal</h3>
+                <aside class="details">
+                <h3 class="detail" id="proteinDetail">B</h3>
+                <h3 class="detail" id="fatDetail">T</h3>
+                <h3 class="detail" id="carbsDetail">W</h3>
+                </aside>
+            </div>
+        </section>
+        <section class="foodList">
+            <section class="addFoodList">
+                <h1 id="font_H2">Dodaj produkty do swojego jadłospisu</h1>
+                <div class="inputs">
+                    <form action="submit" id="listForm">
+                        <input type="text" id="addFoodInput" placeholder="nazwa posiłku">
+                        <input type="number" class="macros" id="proteinInput" placeholder="B">
+                        <input type="number" class="macros" id="fatsInput" placeholder="T">
+                        <input type="number" class="macros" id="carbsInput" placeholder="W">
+                        <button type="submit" id="submitMeal">Dodaj produkt do listy!</button>
+                    </form>
+                </div>
+                <div id="foodListItems">
+                    <ul id="font_H2_black">
+                        <li id="initialItem"><h id="font_H3_black">Dodaj produkt do listy</h3><button id="removeListItem">X</button></li>
+                    </ul>
+                </div>
+            </section>
+            <section class="water">
+                <h2 id="waterTitle">Ile szklanek wody dzisiaj wypiłeś/wypiłaś?</h2>
+                <form name="waterGlasses" id="waterForm">
+                    <input type="number" placeholder="szt" name="waterGlasses" id="inputWater">
+                    <button type="submit" id="submitWater">&#x2705</button>
+                </form>
+                <h3 id="waterInfo"></h3>
+            </section>
+            <section class="feedback">
+                <h1 class="waterFeedback" id="font_H2">Informacja zwrotna</h1>
+                <h1 class="caloriesFeedback" id="font_H3_white"></h1>
+            </section>
+        </section>
+        <footer>
+            <h3></h3>
+        </footer>
+    </div>
+    <script src="run.js" type="module"></script>
+</body>
+</html>

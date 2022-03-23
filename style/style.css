@@ -1,0 +1,393 @@
+:root{
+    @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400&display=swap');
+
+    --colorMain: #00539CFF;
+    --colorSecond: #EEA47FFF;
+    --colorText: #fff;
+    --colorBtnMain: #317773;
+    --colorBtnSecond: #E2D1F9;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: .2s;
+}
+#font_H1{
+    font-size: 24px;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: bold;
+    color: #fff;
+    text-transform: capitalize;  
+    text-shadow: 1px 1px 3px #fff;  
+}
+#font_H2{
+    font-size: 16px;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: bold;
+    color: #fff; 
+}
+#font_H3_white{
+    font-size: 16px;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: normal;
+    font-style: italic;
+    color: #fff;   
+}
+#font_H1_black{
+    font-size: 16px;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: normal;
+    font-style: italic;
+    color: #000; 
+}
+.border{
+    background-color: var(--colorMain);
+    border: 4px solid white;
+    border-radius: 20px;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--colorMain); 
+}
+
+div.app{
+    width: 640px;
+    height: 800px;
+
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    background-color: var(--colorSecond);
+    padding: 20px 10px;
+    border: 5px solid white;
+    border-radius: 20px;
+
+    font-family: 'Fredoka', sans-serif;
+    font-size: 16px;
+
+    display: grid;
+    grid-template-columns: 5% repeat(2, 45%) 5%;
+    grid-template-rows: 10% 20% 5% 55% 5%;
+    grid-template-areas:
+    '. header header .'
+    '. calculator calculator .'
+    'innerMargin innerMargin innerMargin innerMargin'
+    '. input input . '
+    'footer footer footer footer';
+}
+section.header{
+    grid-area: header;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+section.header h1{
+    flex-grow: 2;
+    text-align: center;
+}
+section.header aside{
+    flex-grow: 1;
+    text-align: center;
+}
+section.header aside button{
+    padding: 15px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+section.header aside button{
+    background: linear-gradient(45deg, var(--colorBtnMain) 49.9%, blue 50%, var(--colorBtnSecond) 50.1%);
+    cursor: pointer;
+}
+section.calorieCalculator{
+    grid-area: calculator;
+    margin-top: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+section.calorieCalculator h1.title{
+    flex-basis: 100%;
+    text-align: center;
+}
+section.calorieCalculator form.options{
+    flex-basis: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+section.calorieCalculator form.options div.input{
+    flex-basis: 20%;
+    height: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+section.calorieCalculator form.options h2{
+    flex-basis: 100%;
+}
+section.calorieCalculator form.options div.input input{
+    width: 60%;
+    padding: 0 10px;
+    border-radius: 10px;
+    border: 0px transparent;
+    text-align: center;
+}
+section.calorieCalculator form.options div.inputGender{
+    flex-basis: 25%;
+    height: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;    
+}
+section.calorieCalculator form.options div.inputGender label{
+    flex-basis: 50%;
+    height: 15px;
+    width: 15px;
+    color: white;
+    font-weight: bold;
+}
+section.calorieCalculator form.options div.inputGender label input{
+    margin-right: 3px;
+}
+section.calorieCalculator form.options div.inputRange{
+    flex-basis: 30%;
+    height: 40px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+section.calorieCalculator form.options div.inputRange input{
+    width: 75%;
+}
+section.calorieCalculator form.options button.submitCalculator{
+    flex-basis: 5%;
+    margin: 0 10px;
+    background-color: transparent;
+    font-size: 20px;
+    border: transparent;
+    cursor: pointer;
+}
+section.calorieCalculator div.summary{
+    flex-basis: 100%;
+    display: flex;
+    font-family: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+section.calorieCalculator div.summary h2, section.calorieCalculator div.summary h3{
+    flex-grow: 1;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+}
+section.calorieCalculator div.summary aside{
+    flex-grow: 1;
+    display: flex;
+    font-family: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 5%;
+}
+section.foodList{
+    grid-area: input;
+    display: grid;
+    grid-template-rows:repeat(2, 50%);
+    grid-template-columns: repeat(2, 50%);
+    grid-template-areas: 
+    'food water'
+    'food feedback';
+}
+section.foodList section.addFoodList{
+    grid-area: food;
+    position: relative;
+    background-color: var(--colorMain);
+    border: 5px solid white;
+    border-radius: 20px;
+    margin: 0 5%;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 15% 5% 10% 80%;
+    grid-template-areas: 
+    'h1'
+    'inputs'
+    'button'
+    'list';  
+}
+section.foodList section.addFoodList form{
+    margin: 0 2px;
+}
+
+section.foodList h1{
+    grid-area: h1;
+    margin: 15px 0;
+    text-align: center;
+}
+section.foodList section.addFoodList input{
+    border-radius: 5px;
+    border: 2px solid transparent;
+}
+section.foodList section.addFoodList input#addFoodInput{
+    grid-area: inputs;
+    width: 40%;
+    margin: 0 1% 0 1%;
+    border-radius: 5px;
+}
+
+section.foodList section.addFoodList input.macros{
+    grid-area: inputs;
+    width: 16%;
+    margin: 0 1px;
+    border-radius: 5px;
+}
+section.foodList section.addFoodList button{
+    grid-area: button;
+    width: 60%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 3%;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+div#foodListItems{
+    grid-area: list;
+    background-color: white;
+    margin: 5% auto;
+    height: 80%;
+    width: 90%;
+    border-radius: 10px;
+    border: 2px solid white;
+    overflow: scroll;
+}
+div#foodListItems ul{
+    width: 90%;
+    min-height: 90%;
+    margin: 5% auto;
+    list-style: decimal;
+}
+div#foodListItems ul li{
+    display: flex;  
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+div#foodListItems ul li h1{
+    flex-basis: 65%;
+    margin: 5px;
+}
+div#foodListItems ul li button{
+    flex-basis: 25%;
+    left: 5px;
+    height: 20px;
+    width: 20px;
+    border: 1px solid black;
+    margin: 5px;
+}
+li#initialItem button{
+    display: none;
+}
+
+section.foodList section.water{
+    grid-area: water;
+    background-color: var(--colorMain);
+    border: 5px solid white;
+    border-radius: 20px;
+    margin-bottom: 2.5%;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 3fr;
+    grid-template-areas: 
+    'h1'
+    'form'
+    'h2';
+}
+
+h2#waterTitle{
+    margin: 5%;
+    font-size: 16px;
+    color: white;
+    grid-area: h1;
+    text-align: center;
+}
+section.foodList section.water form{
+    margin-bottom: 5%;
+    grid-area: form;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+section.foodList section.water form input{
+    height: 30px;
+    width: 30%;
+    padding: 0 10px;
+    border: 0 transparent;
+    border-radius: 10px;
+}
+section.foodList section.water h3{
+    font-size: 16px;
+    font-style: italic;
+    color: white;
+    margin: 0 10px;
+    text-align: center;
+    line-height: 1.3;
+}
+section.foodList section.water form button{
+    flex-basis: 5%;
+    margin: 0 10px;
+    background-color: transparent;
+    font-size: 20px;
+    border: transparent;
+    cursor: pointer;
+}
+section.foodList section.feedback{
+    background-color: var(--colorMain);
+    grid-area: feedback;
+    border: 5px solid white;
+    border-radius: 20px;
+    margin-top: 2.5%;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 25% 75%;
+    grid-template-areas: 
+    'first'
+    'second'
+    ;
+
+}
+section.foodList section.feedback h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+section.foodList section.feedback h1:nth-of-type(1){
+    grid-area: first;
+}
+section.foodList section.feedback h1:nth-of-type(2){
+    grid-area: second;
+    margin: 0 5%;
+}
+
+
+
+
+
+
+

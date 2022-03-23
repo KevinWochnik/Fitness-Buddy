@@ -1,0 +1,35 @@
+Make sure the file always includes the following elements:
+
+Titles and internal titles
+- Introduction - the project's aim
+- Technologies
+- Launch
+
+Consider also using additional elements such as: 
+
+- Table of contents
+- Illustrations
+- Scope of functionalities 
+- Examples of use
+- Project status 
+- Sources
+- Other information
+- What i learned
+
+
+echo "# JAVASCRIPT-Projects" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/KevinWochnik/JAVASCRIPT-Projects.git
+git push -u origin main
+
+…or push an existing repository from the command line
+
+git remote add origin https://github.com/KevinWochnik/JAVASCRIPT-Projects.git
+git branch -M main
+git push -u origin main
+
+
+(All calculations were based on half-fictional patterns, so please do not rely 100% on data obtained via this app)
