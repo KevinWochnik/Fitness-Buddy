@@ -62,7 +62,7 @@ This app can be used to:
 
 
 ## Project status
-The status of the project is finnished, but I highly appreciate any code rewiew on this app, or any feedback from the usage of my project. In the future, I will probably rewrite it in React using CreateReactApp and rewrite styles using sass and tailwind. The next project will contain media querrys to get access to mobile devices.
+The status of the project is finnished, but I highly appreciate any code rewiew on this app, or any feedback from the usage of my project. In the future, I will probably rewrite it in React using CreateReactApp and rewrite styles using sass and tailwind. The next project will contain media queries to get access to mobile devices.
 
 ## Inspiration
 The knowledge of how to do such apps was obtained through courses from the best frontend mentor i know [Samuraj Programowania](https://websamuraj.pl/), and of course partly by uncle google :)
