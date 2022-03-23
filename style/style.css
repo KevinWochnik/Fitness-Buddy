@@ -46,13 +46,11 @@
     border: 4px solid white;
     border-radius: 20px;
 }
-
 body{
     height: 100vh;
     width: 100vw;
     background-color: var(--colorMain); 
 }
-
 div.app{
     width: 640px;
     height: 800px;
@@ -183,7 +181,6 @@ section.calorieCalculator div.summary{
     justify-content: space-around;
     align-items: center;
 }
-
 section.calorieCalculator div.summary h2, section.calorieCalculator div.summary h3{
     flex-grow: 1;
     display: flex;
@@ -227,7 +224,6 @@ section.foodList section.addFoodList{
 section.foodList section.addFoodList form{
     margin: 0 2px;
 }
-
 section.foodList h1{
     grid-area: h1;
     margin: 15px 0;
@@ -243,7 +239,6 @@ section.foodList section.addFoodList input#addFoodInput{
     margin: 0 1% 0 1%;
     border-radius: 5px;
 }
-
 section.foodList section.addFoodList input.macros{
     grid-area: inputs;
     width: 16%;
@@ -264,7 +259,6 @@ section.foodList section.addFoodList button{
     border: 2px solid transparent;
     cursor: pointer;
 }
-
 div#foodListItems{
     grid-area: list;
     background-color: white;
@@ -302,7 +296,6 @@ div#foodListItems ul li button{
 li#initialItem button{
     display: none;
 }
-
 section.foodList section.water{
     grid-area: water;
     background-color: var(--colorMain);
@@ -318,7 +311,6 @@ section.foodList section.water{
     'form'
     'h2';
 }
-
 h2#waterTitle{
     margin: 5%;
     font-size: 16px;
