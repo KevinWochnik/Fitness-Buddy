@@ -384,6 +384,14 @@ section.foodList section.feedback h1:nth-of-type(2){
     grid-area: second;
     margin: 0 5%;
 }
+footer{
+    grid-area: footer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 7% 5%;
+}
 
 
 
