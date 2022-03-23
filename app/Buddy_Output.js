@@ -70,7 +70,6 @@ export class Buddy_Output {
         }
     }
     updateOutput = ()=>{
-        console.log('dziala')
         setTimeout(() =>{
             const inputs = [
                 document.getElementById('age'),
